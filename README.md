@@ -1,7 +1,7 @@
 # workshop_17-181063
 ## Project setup
 
-## client setup
+## Client setup
 ```
 cd client
 ```
@@ -14,14 +14,14 @@ npm install
 npm run serve
 ```
 
-## server setup
+## Server setup
 ```
 cd server
 ```
 ```
 npm install
 ```
-### create table
+### Create table
 ```
 uncomments file index.js in database folder
 ```
@@ -29,7 +29,7 @@ uncomments file index.js in database folder
 ```
 npm start
 ```
-## database
+## Database
 ```
 mysql
 ```
