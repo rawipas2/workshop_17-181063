@@ -1,4 +1,4 @@
-# messenger
+# Client
 
 ## Project setup
 ```
