@@ -8,6 +8,11 @@ const routes = [
     path: '/',
     name: 'Index',
     component: () => import('../components/Index.vue')
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('../components/LoginRegistor/index.vue')
   }
 ]
 

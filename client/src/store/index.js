@@ -18,7 +18,13 @@ export default new Vuex.Store({
     },
     postMessage( _ ,payload){
       axios.post(`${api}chat`, payload).then((res) => {
-        console.log(res + 'send message')
+        console.log(res + 'send message') 
+      })
+    },
+    registerUser( state , payload){
+      axios.post(`${api}employee`, payload).then((res) => {
+        console.log(res.data)
+        state.owner = res.data
       })
     }
   },

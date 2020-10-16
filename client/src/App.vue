@@ -1,21 +1,21 @@
 <template>
   <v-app>
-      <Navigation/>
-    <v-main>
+    <v-main width="75%">
       <router-view />
-      <Footer />
+      <Navigation />
     </v-main>
+    <Footer />
   </v-app>
 </template>
 
 <script>
-import Navigation from './components/Navigation'
-import Footer from './components/InputMesseng'
+import Navigation from "./components/Navigation";
+import Footer from "./components/InputMesseng";
 export default {
-  components : {
+  components: {
     Navigation,
-    Footer
-  }
-}
+    Footer,
+  },
+};
 </script>
  

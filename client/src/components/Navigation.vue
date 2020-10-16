@@ -1,5 +1,6 @@
 <template>
   <v-navigation-drawer 
+  width="25%"
   permanent 
   right
   app

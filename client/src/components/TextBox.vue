@@ -6,17 +6,17 @@
                     color="primary"
                     size="30"
                     >
-                <img
-                    :src=textbox.image
-                    alt="John"
-                    >
+                <v-img
+                     v-bind:src="textboxs.image"
+                     contain
+                     stretch="none"
+                    />
                 </v-avatar>
             </v-col>
-            <v-col cols="auto">
-                <h5>{{textbox.firstName}} 
-                    {{textbox.lastName}}</h5>
+            <v-col cols="auto pl-0">
+                <h5>{{textboxs.fullName}}</h5>
                 <v-chip>
-                    {{textbox.description}}
+                    {{textboxs.message}}
                 </v-chip>
             </v-col>
         </v-row>
@@ -25,6 +25,19 @@
 
 <script>
 export default {
-    props: ["textbox"]
+    props: ["textbox"],
+    data: () => ({
+        textboxs : {
+            fullName : '',
+            message : '',
+            image : ''
+        }
+    }),
+    created () {
+        this.textboxs.fullName = this.textbox.firstName + ' ' + this.textbox.lastName,
+        this.textboxs.message = this.textbox.message,
+        this.textboxs.image = this.textbox.image
+        console.log(this.textbox.image)
+    }
 }
 </script>

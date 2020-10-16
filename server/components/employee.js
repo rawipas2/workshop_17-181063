@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
                         '${req.body.image}', '${req.body.email}', '${req.body.password}')`,
         (error, results) => {
             if (error) throw error;
-            res.json(`employeeId : ${results.insertId}`)
+            res.json(results.insertId)
         })
 })
 

@@ -1,6 +1,7 @@
 const express = require('express')
 const config = require('./database')
 const cors = require('cors')
+const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
 
@@ -17,6 +18,8 @@ app.get('/', (req, res) => {
 })
 
 app.use(cors())
+app.use(express.json({limit: '50mb'}))
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use('/employee', employee)
 app.use('/chat', chat)
 
